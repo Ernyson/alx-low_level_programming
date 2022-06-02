@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - print the string in the puts funtion
+ * main - Entry point
  *
- * Description: using main function this program prints
- * "Programming is like building a multilingual puzzle
- * Return: 0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-puts("\"Programming is like building a multilingualpuzzle");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
