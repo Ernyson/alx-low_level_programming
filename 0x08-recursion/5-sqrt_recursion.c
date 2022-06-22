@@ -1,18 +1,28 @@
 #include "main.h"
-#include <math.h>
+
 /**
- * _sqrt_recursion - return the natural sqaure root of a number
- * @n: argument to the function
- *
- * Description: return the required result
- *
- * Return: return integer value
+ * help - helps sqrt function find sqrt
+ * @n: needs to be sqrt
+ * @x: sqrt of n
+ * Return: natural sqrt of n
  */
+
+int help(int n, int x)
+{
+	if (x * x == n)
+		return (x);
+	else if (x * x < n)
+		return (help(n, ++x));
+	return (-1);
+}
+
+/**
+ * _sqrt_recursion - get the natural sqrt of n
+ * @n: integer
+ * Return: natural sqrt of n
+ */
+
 int _sqrt_recursion(int n)
 {
-	int x;
-
-	x = sqrt(n);
-	if (n != x * x)
-		return (-1);
+	return (help(n, 0));
 }
